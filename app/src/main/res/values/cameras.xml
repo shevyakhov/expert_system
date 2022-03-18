@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cameras">Количество Мпикс</string>
+    <string-array name="Камеры">
+        <item>Не важно</item>
+        <item>4–10 Мпикс</item>
+        <item>12–20 Мпикс</item>
+        <item>более 21 Мпикс</item>
+    </string-array>
+</resources>

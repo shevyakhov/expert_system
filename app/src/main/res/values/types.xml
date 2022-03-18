@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="types">Тип</string>
+    <string-array name="Типы">
+        <item>Смартфон</item>
+        <item>Кнопочный</item>
+
+    </string-array>
+</resources>

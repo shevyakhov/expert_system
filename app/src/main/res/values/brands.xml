@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="brands">Бренды</string>
+    <string-array name="Бренды">
+        <item>Не важно</item>
+        <item>Samsung</item>
+        <item>Xiaomi</item>
+        <item>iPhone</item>
+        <item>Huawei</item>
+        <item>Другие</item>
+    </string-array>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="memos">Размер памяти</string>
+    <string-array name="Память">
+        <item>Не важно</item>
+        <item>до 16 ГБ</item>
+        <item>16–32 ГБ</item>
+        <item>32–64 ГБ</item>
+        <item>64–128 ГБ</item>
+        <item>> 128 ГБ</item>
+
+    </string-array>
+</resources>

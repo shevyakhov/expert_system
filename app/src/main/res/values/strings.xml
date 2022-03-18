@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Phones expert system</string>
+    <string name="textview">Экспертая система по выбору телефона</string>
+    <string name="button">Подобрать телефоны</string>
+    <string name="smartphone">Смартфон</string>
+    <string name="notImportant">Не важно</string>
+</resources>

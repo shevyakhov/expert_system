@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ценовая \n категория"
+        app:layout_constraintBottom_toBottomOf="@+id/moneyCheck"
+        app:layout_constraintEnd_toStartOf="@+id/moneyCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/moneyCheck" />
+
+
+    <Spinner
+        android:id="@+id/memoryCheck"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/batteryCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/brandCheck"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Кол-во \n памяти"
+        app:layout_constraintBottom_toBottomOf="@+id/memoryCheck"
+        app:layout_constraintEnd_toStartOf="@+id/memoryCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/memoryCheck" />
+
+    <Spinner
+        android:id="@+id/brandCheck"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/memoryCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeCheck"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выбор \n Бренда"
+        app:layout_constraintBottom_toBottomOf="@+id/brandCheck"
+        app:layout_constraintEnd_toStartOf="@+id/brandCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/brandCheck" />
+
+    <Spinner
+        android:id="@+id/typeCheck"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/brandCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moneyCheck"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Тип \n Телефона"
+        app:layout_constraintBottom_toBottomOf="@+id/typeCheck"
+        app:layout_constraintEnd_toStartOf="@+id/typeCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/typeCheck" />
+
+    <Spinner
+        android:id="@+id/camCheck"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/colorCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/batteryCheck"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Качество \n Камеры"
+        app:layout_constraintBottom_toBottomOf="@+id/camCheck"
+        app:layout_constraintEnd_toStartOf="@+id/camCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/camCheck" />
+
+    <Spinner
+        android:id="@+id/colorCheck"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camCheck"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выбор \n Цвета"
+        app:layout_constraintBottom_toBottomOf="@+id/colorCheck"
+        app:layout_constraintEnd_toStartOf="@+id/colorCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/colorCheck" />
+
+    <Spinner
+        android:id="@+id/batteryCheck"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/camCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memoryCheck"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Объем \n батареи"
+        app:layout_constraintBottom_toBottomOf="@+id/batteryCheck"
+        app:layout_constraintEnd_toStartOf="@+id/batteryCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/batteryCheck" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/nfc"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="наличие NFC" />
+
+            <CheckBox
+                android:id="@+id/scanner"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Наличие отпечатка пальца" />
+
+            <CheckBox
+                android:id="@+id/sd"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Наличие слота под SD карту" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Spinner
+
+        android:id="@+id/moneyCheck"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/typeCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/textview"
+        app:layout_constraintBottom_toTopOf="@+id/moneyCheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

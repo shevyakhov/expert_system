@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="prices">Цена</string>
+    <string-array name="Цены">
+        <item>Не важно</item>
+        <item>Меньше 15к</item>
+        <item>15к-30к</item>
+        <item>30к-50к</item>
+        <item>Больше 50к</item>
+    </string-array>
+</resources>

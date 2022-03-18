@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="batteries">Вместимость батареи</string>
+    <string-array name="Батареи">
+        <item>Не важно</item>
+        <item>до 3000 мАч</item>
+        <item>3000–3500 мАч</item>
+        <item>3500–4000 мАч</item>
+        <item>более 4000 мАч</item>
+    </string-array>
+</resources>

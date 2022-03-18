@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="colors">Цвет</string>
+    <string-array name="Цвета">
+        <item>Не важно</item>
+        <item>Чёрный</item>
+        <item>Белый</item>
+        <item>Другие</item>
+    </string-array>
+</resources>
