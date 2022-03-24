@@ -2,7 +2,7 @@ package com.example.phonesexpertsystem
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
-
+//класс телефона
 data class Phone(
     var name: String?,
     var price: Int?,
@@ -16,6 +16,7 @@ data class Phone(
     var hasSD: Boolean?
 )
 @Parcelize
+//класс характеристик получаемых от пользователя
 data class PhoneCharacteristics(
     var name: String?,
     var price: String?,
@@ -29,6 +30,7 @@ data class PhoneCharacteristics(
     var hasSD: Boolean?
 ):Parcelable
 
+//база данных - массив элементов класса PHone
 val base = listOf(
     Phone(
         "iPhone 7",

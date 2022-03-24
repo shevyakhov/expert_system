@@ -4,33 +4,36 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
+//класс отвечающий за связь элементов UI и методов
 class AppModel : ViewModel() {
+
+    //небходимые характеристики телефона с доступом из любой точки приложения
     private var phone = MutableLiveData<PhoneCharacteristics>()
 
-
+    //переприсвоить хар-ки
     fun sendPhone(new: PhoneCharacteristics) {
         phone.value = new
     }
 
+    // метод вычисляющий список подходящих моделей
     fun choosePhones(): MutableList<Phone> {
-        Log.e("!!!", "!!!!!")
-        Log.e("ph", "${phone.value}")
-        val newBase = mutableListOf<Phone>()
-        for (i in base) {
+
+        val newBase = mutableListOf<Phone>()//формирование массива с телефонами
+        for (i in base) {//проход по всей базе данных
             with(phone.value) {
-                if (
-                    this?.name?.let { checkBrand(it, i) } == true
-                    && checkPrice(this.price, i)
-                    && checkType(this.type, i)
-                    && checkRam(this.ram, i)
-                    && checkBattery(this.battery, i)
-                    && checkCamera(this.camera, i)
-                    && checkColor(this.color, i)
-                    && this.hasNFC == i.hasNFC
-                    && this.hasFingerprint == i.hasFingerprint
-                    && this.hasSD == i.hasSD
+                if (//вызывает методы проверки хар-к
+                    this?.name?.let { checkBrand(it, i) } == true  //проверяет подходит ли бренд
+                    && checkPrice(this.price, i)               //проверяет подходит ли цена
+                    && checkType(this.type, i)                 //проверяет подходит ли бренд
+                    && checkRam(this.ram, i)                   //проверяет подходит ли память
+                    && checkBattery(this.battery, i)           //проверяет подходит ли батарея
+                    && checkCamera(this.camera, i)             //проверяет подходит ли камера
+                    && checkColor(this.color, i)               //проверяет подходит ли цвет
+                    && this.hasNFC == i.hasNFC                 //проверяет есть ли NFC
+                    && this.hasFingerprint == i.hasFingerprint //проверяет есть ли сканнер пальца
+                    && this.hasSD == i.hasSD                   //проверяет подходит ли SD разъем
                 ) {
-                    newBase.add(i)
+                    newBase.add(i) // если телефон подходит - добавляем в список
                 }
             }
         }

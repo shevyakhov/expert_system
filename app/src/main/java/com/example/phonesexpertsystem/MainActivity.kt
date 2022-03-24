@@ -10,10 +10,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.phonesexpertsystem.databinding.ActivityMainBinding
 
+//Экран выбора хар-к пользователем
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var vm: AppModel
-    val phone = PhoneCharacteristics(
+    private lateinit var binding: ActivityMainBinding // переменная отвечающая за верстку
+    private lateinit var vm: AppModel // класс отвечающий за методы поиска телефонов
+    val phone = PhoneCharacteristics(// инициализация класса характеристик
         null,
         null,
         null,
@@ -27,25 +28,27 @@ class MainActivity : AppCompatActivity() {
     )
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {//создать экран
         super.onCreate(savedInstanceState)
+
+        //инициализация классов
         vm = ViewModelProvider(this)[AppModel::class.java]
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setUpSpinners()
-        setUpAdaptersListener()
-        setUpCheckers()
+        setUpSpinners() //настроить выдвигающиеся окна
+        setUpAdaptersListener() // настроить сохранение данных с выползающих окон
+        setUpCheckers() //настроить окна с галочками
 
         binding.button.setOnClickListener {
-
+            //Если нажата кнопка - отправить все полученные данные на другой экран
             intent = Intent(this, PhoneListActivity::class.java)
             intent.putExtra("phone", phone)
             startActivity(intent)
         }
     }
 
-    private fun setUpSpinners() {
+    private fun setUpSpinners() {//устанавливает какие данные будут в каждом из окон
         val adapterPrice = ArrayAdapter.createFromResource(
             this,
             R.array.Цены,
@@ -106,6 +109,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpAdaptersListener() {
+        //если цена > 15к то телефон по умолчанию - смартфон
         binding.moneyCheck.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 val resultArray = resources.getStringArray(R.array.Цены)
@@ -114,6 +118,7 @@ class MainActivity : AppCompatActivity() {
                 if (result != "Меньше 15к") {
                     phone.type = "Смартфон"
                 }
+                //сохранение выбора
                 phone.price = result
             }
 
@@ -127,6 +132,7 @@ class MainActivity : AppCompatActivity() {
                 val resultArray = resources.getStringArray(R.array.Типы)
                 val result = resultArray[p2]
                 phone.type = result
+                //сохранение выбора
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -138,6 +144,7 @@ class MainActivity : AppCompatActivity() {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 val resultArray = resources.getStringArray(R.array.Бренды)
                 val result = resultArray[p2]
+                //сохранение выбора
                 phone.name = result
             }
 
@@ -150,6 +157,7 @@ class MainActivity : AppCompatActivity() {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 val resultArray = resources.getStringArray(R.array.Память)
                 val result = resultArray[p2]
+                //сохранение выбора
                 phone.ram = result
             }
 
@@ -162,6 +170,7 @@ class MainActivity : AppCompatActivity() {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 val resultArray = resources.getStringArray(R.array.Батареи)
                 val result = resultArray[p2]
+                //сохранение выбора
                 phone.battery = result
             }
 
@@ -175,6 +184,7 @@ class MainActivity : AppCompatActivity() {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 val resultArray = resources.getStringArray(R.array.Камеры)
                 val result = resultArray[p2]
+                //сохранение выбора
                 phone.camera = result
             }
 
@@ -187,6 +197,7 @@ class MainActivity : AppCompatActivity() {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 val resultArray = resources.getStringArray(R.array.Цвета)
                 val result = resultArray[p2]
+                //сохранение выбора
                 phone.color = result
             }
 
@@ -199,6 +210,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpCheckers() {
+        //если нажат крестик - сохраняем
         binding.nfc.setOnCheckedChangeListener { _, b ->
             phone.hasNFC = b
         }
